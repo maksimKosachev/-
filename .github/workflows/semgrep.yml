@@ -1,9 +1,12 @@
+# название вашего action
 name: Semgrep
+# условия выполнения action - при внесении изменений в ветки main и test
 on:
   push:
     branches:
       - main
       - test
+# содержание action - создание и выполнение контейнера с анализатором
 jobs:
   semgrep:
     name: semgrep/ci
